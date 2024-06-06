@@ -1741,7 +1741,14 @@
     body: "Tan ( ${1:angleInRadians} )$0"
   TantQue:
     prefix: "tq"
-    body: "TantQue ( [ variablelnitiale ] ; condition; [ logique ] ; résultat )$0"
+    body: '''TantQue (
+          [ varInit1 = valeur1 ; varInit2 = valeur2 ; ... ] ;
+          condition ;
+          [ varlogique1 = expression1 ;
+          varlogique2 = expression2 ;
+          ...
+          ] ; /*variables évaluées àchaque fois que la boucle est répétée*/
+          résultat )$0'''
   TextColor:
     prefix: "textcolor"
     body: "TextColor ( ${1:text}; ${2:RGB ( ${3:red}; ${4:green}; ${5:blue} )} )$0"
