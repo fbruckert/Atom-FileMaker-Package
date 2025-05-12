@@ -1,0 +1,76 @@
+fileTypes: [
+  "fmfn"
+  "calc"
+]
+foldingStartMarker: "/\\*\\*|\\{\\s*$"
+foldingStopMarker: "\\*\\*/|^\\s*\\}"
+name: "FileMaker"
+patterns: [
+  {
+    match: "\\b(Abs|Acos|AjoutStyleTexte|Alea|Annee|Arrondi|Asin|Atan|Average|Base64Decode|Base64Encode|Base64EncodeRFC|BaseTableIDs|BaseTableNames|Caractere|Cas|Case|Ceiling|Char|ChiffreKanji|Choisir|Choose|Citation|Code|CoderBase64|Combinaison|Combination|CommentaireRubrique|ComputeModel|Contenu|ConvertFromFileMakerPath|ConvertToFileMakerPath|Cos|CouleurTexte|Count|CryptAuthCode|CryptDecrypt|CryptDecryptBase64|CryptDigest|CryptEncrypt|CryptEncryptBase64|CryptGenerateSignature|CryptVerifySignature|DatabaseNames|Date|Day|DayName|DayNameJ|DayOfWeek|DayOfYear|Debut|DecoderBase64|Decompte|DecompteValeurs|Definir|DefinirRecursion|Degrees|Degres|Derniere|DetecterBeacons|Div|Début|Définir|EcartType|EcartTypePop|ElementsListeValeurs|Emplacement|Ent|ErreurEvaluation|EstCorrect|EstEgal|EstExpressionValide|EstVide|Evaluate|Evaluation|EvaluationError|Exact|ExecuterSQL|ExecuterSQLe|ExecuteSQL|ExecuteSQLe|Exp|Extend|External|Externe|Extrait|Factorial|Factoriel|FieldBounds|FieldComment|FieldIDs|FieldNames|FieldRepetitions|FieldStyle|FieldType|Filter|FilterValues|Filtre|Fin|Floor|Furigana|FV|Get|GetAddonInfo|GetAsBoolean|GetAsCSS|GetAsDate|GetAsNumber|GetAsSVG|GetAsText|GetAsTime|GetAsTimestamp|GetAsURLEncoded|GetAVPlayerAttribute|GetBaseTableName|GetContainerAttribute|GetField|GetFieldName|GetHeight|GetLayoutObjectAttribute|GetLayoutObjectAttribute|GetLayoutObjectOwnerInfo|GetModelAttributes|GetNextSerialValue|GetNthRecord|GetRepetition|GetSensor|GetSummary|GetThumbnail|GetValue|GetWidth|Heure|Heures|HexDecode|HexEncode|Hiragana|Horodatage|Hour|IDsListesValeurs|IDsModele|IDsModeles|IDsRubriques|IDsScripts|IDsTables|IDsTablesBase|If|IncrementSerie|InfosLien|Int|IsEmpty|IsValid|IsValidExpression|Jour|JourAnnee|JourSemaine|JSONDeleteElement|JSONFormatElements|JSONGetElement|JSONGetElementType|JSONListKeys|JSONListValues|JSONSetElement|KanaHankaku|KanaZenkaku|KanjiNumeral|Katakana|Last|LayoutIDs|LayoutNames|LayoutObjectNames|LayoutObjectUUID|Left|LeftValues|LeftWords|Length|Let|Lg|LireCodeQR|List|Liste|Ln|Ln|Location|LocationValues|Log|Longueur|Lookup|LookupNext|Lower|Majuscule|Max|Max|Middle|MiddleValues|MiddleWords|Min|Min|Minuscule|Minute|Minutes|Mod|Mois|Month|MonthName|MonthNameJ|MotsDebut|MotsExtraits|MotsFin|Moyenne|Multivaluee|NomAnnee|NombreMots|NombreVersTexteJ|NomJour|NomJourJ|NomMois|NomMoisJ|NomPropre|NomsBases|NomsFenetres|NomsListesValeurs|NomsModeles|NomsObjetsModeles|NomsRubriques|NomsScripts|NomsTables|NomsTablesBase|Npv|NumToJText|Obtenir|ObtenirAttributAVPlayer|ObtenirAttributConteneur|ObtenirAttributObjetModele|ObtenirCapteur|ObtenirChiffreKanji|ObtenirCommeBooleen|ObtenirCSS|ObtenirDate|ObtenirEniemeEnreg|ObtenirHauteur|ObtenirHeure|ObtenirHorodatage|ObtenirInfoExtension|ObtenirInfoProprietaireObjetModele|ObtenirLargeur|ObtenirMiniature|ObtenirNombre|ObtenirNomRubrique|ObtenirNomTableBase|ObtenirRepetition|ObtenirSVG|ObtenirTexte|ObtenirTexteDynamique|ObtenirURLCodee|ObtenirValeur|Occurrences|PatternCount|Pi|Plafond|Plancher|PMT|PoliceTexte|Position|Precision|Proper|PV|Quote|Racine|Radians|Random|RangeBeacons|ReadQRCode|Recapitulatif|ReferenceExterne|ReferenceExterneSuivante|RelationInfo|Remboursement|Remplace|Replace|ResultatRubrique|ResultatValeurSerieSuivante|RGB|Right|RightValues|RightWords|RomanHankaku|RomanHankaku|RomanZenkaku|Round|RVB|ScriptIDs|ScriptNames|Secondes|Seconds|Self|SemaineAnnee|SemaineExercice|SerialIncrement|SetPrecision|SetRecursion|Si|Sign|Signe|Sin|Somme|SortValues|Sqrt|StDev|StDevP|StyleRubrique|Substituer|Substitute|Sum|SupprimerCouleurTexte|SupprimerEspace|SupprimerFormatTexte|SupprimerPoliceTexte|SupprimerStyleTexte|SupprimerTailleTexte|SupprimerTypeEspace|TableIDs|TableNames|TailleRubrique|TailleTexte|Tan|TantQue|TextColor|TextColorRemove|TextDecode|TextEncode|TextFont|TextFontRemove|TextFormatRemove|TextSize|TextSizeRemove|TextStyleAdd|TextStyleRemove|Time|Timestamp|Trim|TrimAll|Tronque|Truncate|TypeRubrique|UniqueValues|Upper|UUIDObjetModele|Va|Valeurs Rubrique|ValeursDebut|ValeursEmplacement|ValeursExtraites|ValeursFiltre|ValeursFin|ValeursRubrique|ValueCount|ValueListIDs|ValueListItems|ValueListNames|Variance|VarianceP|Vc|VerifierConteneur|VerifyContainer|WeekOfYear|WeekOfYearFiscal|While|WindowNames|WordCount|Year|YearName)\\b"
+    name: "support.function.builtin_functions.filemaker"
+  }
+  {
+    begin: "\""
+    end: "\""
+    name: "string.quoted.double.filemaker"
+    patterns: [
+      {
+        match: "\\\\\""
+        name: "constant.character.escape.filemaker"
+      }
+    ]
+  }
+  {
+    begin: "/\\*"
+    captures:
+      "0":
+        name: "punctuation.definition.comment.filemaker"
+    end: "\\*/"
+    name: "comment.block.filemaker"
+  }
+  {
+    captures:
+      "1":
+        name: "punctuation.definition.comment.filemaker"
+    match: "(//).*?($\\n?|(?=\\?>))"
+    name: "comment.line.double-slash.filemaker"
+  }
+  {
+    match: "(?i)\\b(AccountGroupName\|AccountName\|AccountType\|AccèsEnreg\|AccèsModèle\|ActiveFieldContents\|ActiveFieldName\|ActiveFieldTableName\|ActiveLayoutObjectName\|ActiveModifierKeys\|ActiveRecordNumber\|ActiveRepetitionNumber\|ActiveSelectionSize\|ActiveSelectionStart\|AdresseIPHôte\|AdresseIPSystème\|AdresseNICSystème\|AllowAbortState\|AllowToolbarState\|AllowToolbarState\|AllStyles\|Appareil\|ApparenceSystème\|ApplicationArchitecture\|ApplicationLanguage\|ApplicationVersion\|ArchitectureApplication\|AttributsConnexion\|Barré\|bas\|Bold\|bottom\|bounds\|CacheFileName\|CacheFilePath\|CalculationRepetitionNumber\|CentralEurope\|CheminBureau\|CheminDocuments\|CheminFichier\|CheminFichierCache\|CheminFilemaker\|CheminPréférences\|CheminTemporaire\|Condense\|Condensé\|ConnectionAttributes\|ConnectionState\|containedObjects\|containsFocus\|content\|contenu\|ContenuRubriqueActive\|CouleurContrasteElevé\|Cryllic\|CurrentDate\|CurrentHostTimestamp\|CurrentTime\|CurrentTimestamp\|CurrentTimeUTCMicroseconds\|CurrentTimeUTCMilliseconds\|CustomMenuSetName\|DateActuelle\|DernierChoixMessage\|DernièreErreur\|DernièreErreurOdbc\|DesktopPath\|Device\|DisqueSystème\|DocumentsPath\|DocumentsPathListing\|Doublesouligné\|DoubleUnderline\|droit\|début\|DébutSélectionActive\|DéclencherÉvénementExterne\|DétailDernièreErreur\|EmplacementDernièreErreur\|enclosingObject\|EncryptionState\|endPoint\|ErrorCaptureState\|EtatAnimationScript\|EtatAnnulerTransactionSurErreur\|EtatAutoriserAnnulation\|EtatAutoriserBarreOutils\|EtatAutoriserBarreTexte\|EtatBarreMenus\|EtatClavierTactile\|EtatConnexion\|EtatContrasteElevé\|EtatCryptage\|EtatEnregOuvert\|EtatGestionErreurs\|EtatIgnorerRequête\|EtatMultiUtilisateur\|EtatOuvertTransaction\|EtatTri\|EtatUtiliserFormatsSystème\|EtatVueModèle\|EtatZoneOutils\|Etendu\|EvénementsSurveillanceZone\|Exposant\|Extend\|ExtendedPrivileges\|FacteurEchelleEcran\|FenêtreGauche\|FenêtreVisible\|FileLocaleElements\|FileMakerPath\|FileName\|FilePath\|FileSize\|fin\|FMPluginsInstallésAuFormatJSON\|FoundCount\|FrappeClavierDéclencheur\|gauche\|Gras\|Greek\|hasFocus\|haut\|hauteur\|HauteurContenuFenêtre\|HauteurEcran\|HauteurFenêtre\|HauteurFenêtreBureau\|HautFenêtre\|height\|HeureActuelle\|HeureActuelleUTCMicrosecondes\|HeureActuelleUTCMillisecondes\|HighContrastColor\|HighContrastState\|HorodatageActuel\|HorodatageHôteActif\|HorodatageHôteActuel\|HostApplicationVersion\|HostIPAddress\|HostName\|IDEnreg\|IdentifiantDeSession\|IdentifiantDeSession\|IDPersistant\|IDPersistante\|Indice\|InfoFichierDonnéesOuvert\|InfoMouvementDéclencheur\|InstalledFMPlugins\|InstalledFMPluginsAsJSON\|isFrontTabPanel\|Italic\|Italique\|LangueApplication\|LangueSystème\|largeur\|LargeurContenuFenêtre\|LargeurEcran\|LargeurFenêtre\|LargeurFenêtreBureau\|LastError\|LastErrorDetail\|LastErrorLocation\|LastMessageChoice\|LastODBCError\|LayoutAccess\|LayoutCount\|LayoutName\|LayoutNumber\|LayoutTableName\|LayoutViewState\|left\|ListingDocuments\|Lowercase\|Majuscule\|MenubarState\|Minuscule\|ModeFenêtre\|ModifiedFields\|Motssoulignés\|MultiUserState\|NetworkProtocol\|NetworkType\|NiveauZoomFenêtre\|NombreEnregOuverts\|NombreEnregTotal\|NombreEnregTrouvés\|NombreModificationsEnreg\|NombreModèles\|NombrePages\|NombreRequêtes\|NombreRépétitionsCalcul\|NombreUtilisateurs\|NomCompte\|NomFenêtre\|NomFichier\|NomFichierCache\|NomGroupeCompte\|NomHôte\|NomImprimante\|NomJeuMenuPersonnalisé\|NomModèle\|NomObjetModèleActif\|NomPrivilèges\|NomPrivilègesActuels\|NomPrivilègesCompte\|NomRubriqueActive\|NomScript\|NomTableModèle\|NomTableRubriqueActive\|NomUtilisateur\|NuméroEnreg\|NuméroEnregActif\|NuméroModèle\|NuméroPage\|NuméroRangéeTableExterne\|NuméroRangéeTableExterneActive\|NuméroRépétitionActive\|NuméroValeur\|objectType\|OEM\|OngletActuelDéclencheur\|OngletCibleDéclencheur\|OpenDataFileInfo\|OrientationFenêtre\|Other\|PageCount\|PageNumber\|PanneauActuelDéclencheur\|PanneauCibleDéclencheur\|ParamètreScript\|PersistantID\|PersistentID\|Petites Majuscule\|Plain\|PlateformeSystème\|PluginsFMInstallés\|PortalRowNumber\|PreferencesPath\|PrinterName\|PrivilegeSetName\|PrivilègesEtendusActuels\|PrivilègesEtendusCompte\|ProfondeurEcran\|ProtocoleRéseau\|RecordAccess\|RecordID\|RecordModificationCount\|RecordNumber\|RecordOpenCount\|RecordOpenState\|RegionMonitorEvents\|RequestCount\|RequestOmitState\|RevertTransactionOnErrorState\|right\|Roman\|rotation\|RubriquesModifiées\|RégletteTexteVisible\|RésultatScript\|RésultatsScript\|ScreenDepth\|ScreenHeight\|ScreenScaleFactor\|ScreenWidth\|ScriptAnimationState\|ScriptName\|ScriptParameter\|ScriptResult\|SessionIdentifier\|SessionIdentifier\|ShiftJIS\|SimplifiedChinese\|SmallCaps\|SortState\|Souligné\|source\|Standard\|startPoint\|StatusAreaState\|Strikethrough\|StyleFenêtre\|Subscript\|Superscript\|Symbol\|SystemAppearance\|SystemDrive\|SystemIPAddress\|SystemLanguage\|SystemLocaleElements\|SystemNICAddress\|SystemPlatform\|SystemStorageAvailable\|SystemStorageAvailable\|SystemVersion\|TailleFichier\|TailleSélectionActive\|TemporaryPath\|TexteRechercheRapide\|TextRulerVisible\|Titlecase\|top\|TotalRecordCount\|TouchesSpécialesActives\|TouchesSpécialesDéclencheur\|TouchKeyboardState\|TraditionalChinese\|TransactionOpenState\|TriggerCurrentPanel\|TriggerCurrentTabPanel\|TriggerExternalEvent\|TriggerGestureInfo\|TriggerKeystroke\|TriggerModifierKeys\|TriggerTargetPanel\|TriggerTargetTabPanel\|TypeCompte\|TypeRéseau\|Underline\|Uppercase\|UserCount\|UserName\|UseSystemFormatsState\|UUID\|UUIDnombre\|UUIDNumber\|VersionApplication\|VersionApplicationHôte\|VersionSystème\|width\|WindowContentHeight\|WindowContentWidth\|WindowDesktopHeight\|WindowDesktopWidth\|WindowHeight\|WindowLeft\|WindowMode\|WindowName\|WindowOrientation\|WindowStyle\|WindowTop\|WindowVisible\|WindowWidth\|WindowZoomLevel\|WordUnderline\|ÉlementsLocaleFichier\|ÉlementsLocaleSystème\|ÉtatBarreMenus\|ÉtatClavierTactile\|ÉvénementExterneDéclencheur)\\b"
+    name: "constant.language.php"
+  }
+  {
+    match: "(\\$)[a-zA-Z_][a-zA-Z0-9_]*?\\b"
+    name: "variable.script_variable.local.filemaker"
+  }
+  {
+    match: "(\\$\\$)[a-zA-Z_][a-zA-Z0-9_]*?\\b"
+    name: "variable.script_variable.global.filemaker"
+  }
+  {
+    match: "\\b-?[1-9]\\d*(\\.[0-9]+)?\\b"
+    name: "constant.numeric.filemaker"
+  }
+  {
+    match: "(\\-|\\+|\\*|/)"
+    name: "keyword.operator.arithmetic.filemaker"
+  }
+  {
+    match: "\\b(and|or|xor|not)\\b"
+    name: "keyword.operator.logical.filemaker"
+  }
+  {
+    match: "(=|<=|≤|>=|≥|<>|≠|<|>)"
+    name: "keyword.operator.comparison.filemaker"
+  }
+  {
+    match: "&"
+    name: "keyword.operator.string.filemaker"
+  }
+  {
+    match: "="
+    name: "keyword.operator.assignment.filemaker"
+  }
+]
+scopeName: "source.filemaker"

@@ -1,0 +1,14 @@
+{
+  "name": "filemaker-bundle",
+  "version": "2.1.0",
+  "description": "FileMaker Bundle FR & US, included functions French and English until version 21 of Claris FileMaker. Contact: fbruckert@yahoo.com",
+  "keywords": [
+  ],
+  "repository": "https://github.com/fbruckert/",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
